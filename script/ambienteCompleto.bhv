@@ -1,0 +1,197 @@
+<behavior startdate="28/01/2024-00:00:00" factor="200">
+	 
+	<!-- CUCINA --> 
+	<create-zone id="cucina"  leftX="410" topY="370" X-Length="245" Y-Length="210" />	 
+	<add-zone-variable zoneId="cucina" variable="Illuminance" />
+	<modify-zone-variable zoneId="cucina" variable="Illuminance" value="0"/>
+    <add-zone-variable zoneId="cucina" variable="CO2Concentration"/>
+	<modify-zone-variable zoneId="cucina" variable="CO2Concentration" value="0"/>
+	
+	<!-- luci -->
+	<create-device id="SensorePresenza-01" type="iCasa.PresenceSensor" />
+	<create-device id="Luce-01-1" type="iCasa.BinaryLight" />
+	<create-device id="Fotometro-01" type="iCasa.Photometer" />
+	<create-device id="Pulsante-L01" type="iCasa.PushButton" />
+	<set-device-property deviceId="Pulsante-L01" property="Tipologia" value="luci" />
+	<move-device-zone deviceId="SensorePresenza-01" zoneId="cucina" />
+	<move-device-zone deviceId="Luce-01-1" zoneId="cucina" />
+	<move-device-zone deviceId="Fotometro-01" zoneId="cucina" />
+	<move-device-zone deviceId="Pulsante-L01" zoneId="cucina" />
+
+	<!-- temperatura -->
+	<create-device id="Termometro-01" type="iCasa.Thermometer" />
+	<create-device id="Calorifero-01-1" type="iCasa.Heater" />
+	<create-device id="Condizionatore-01-1" type="iCasa.Cooler" />
+	<create-device id="Pulsante-T01" type="iCasa.PushButton" />
+	<set-device-property deviceId="Pulsante-T01" property="Tipologia" value="temperatura" />
+	<move-device-zone deviceId="Termometro-01" zoneId="cucina" />
+	<move-device-zone deviceId="Calorifero-01-1" zoneId="cucina" />
+	<move-device-zone deviceId="Condizionatore-01-1" zoneId="cucina" />
+	<move-device-zone deviceId="Pulsante-T01" zoneId="cucina" />
+
+	<!-- allarmi -->
+    <create-device id="RilevatoreCO2-01" type="iCasa.CO2GasSensor" />
+	<create-device id="Sprinkler-01-1" type="iCasa.Sprinkler" />
+	<create-device id="Sirena-01-1" type="iCasa.Siren" />
+	<create-device id="SensoreApertura-01" type="iCasa.DoorWindowSensor" />
+	<create-device id="Telecamera-01" type="iCasa.Camera" />
+    <move-device-zone deviceId="Sprinkler-01-1" zoneId="cucina" />
+	<move-device-zone deviceId="RilevatoreCO2-01" zoneId="cucina" />
+	<move-device-zone deviceId="Sirena-01-1" zoneId="cucina" />
+	<move-device-zone deviceId="SensoreApertura-01" zoneId="cucina" />
+	<move-device-zone deviceId="Telecamera-01" zoneId="cucina" />
+
+
+	<!-- SOGGIORNO -->
+	<create-zone id="soggiorno" leftX="410" topY="28" X-Length="245" Y-Length="350" />
+	<add-zone-variable zoneId="soggiorno" variable="Illuminance" />
+	<modify-zone-variable zoneId="soggiorno" variable="Illuminance" value="0"/>
+	
+	<!-- luci -->
+	<create-device id="SensorePresenza-02" type="iCasa.PresenceSensor" />
+	<create-device id="Luce-02-1" type="iCasa.BinaryLight" />
+	<create-device id="Fotometro-02" type="iCasa.Photometer" />
+	<create-device id="Pulsante-L02" type="iCasa.PushButton" />
+	<set-device-property deviceId="Pulsante-L02" property="Tipologia" value="luci" />
+	<move-device-zone deviceId="SensorePresenza-02" zoneId="soggiorno" />
+	<move-device-zone deviceId="Luce-02-1" zoneId="soggiorno" />
+	<move-device-zone deviceId="Fotometro-02" zoneId="soggiorno" />
+    <move-device-zone deviceId="Pulsante-L02" zoneId="soggiorno" />
+	
+	<!-- temperatura -->
+	<create-device id="Termometro-02" type="iCasa.Thermometer" />
+	<create-device id="Calorifero-02-1" type="iCasa.Heater" />
+	<create-device id="Condizionatore-02-1" type="iCasa.Cooler" />
+	<create-device id="Pulsante-T02" type="iCasa.PushButton" />
+	<set-device-property deviceId="Pulsante-T02" property="Tipologia" value="temperatura" />
+	<move-device-zone deviceId="Termometro-02" zoneId="soggiorno" />
+	<move-device-zone deviceId="Calorifero-02-1" zoneId="soggiorno" />
+	<move-device-zone deviceId="Condizionatore-02-1" zoneId="soggiorno" />
+	<move-device-zone deviceId="Pulsante-T02" zoneId="soggiorno" />
+
+	<!-- allarmi -->
+	<create-device id="Sirena-02-1" type="iCasa.Siren" />
+	<create-device id="SensoreApertura-02" type="iCasa.DoorWindowSensor" />
+	<create-device id="Telecamera-02" type="iCasa.Camera" />
+	<move-device-zone deviceId="Sirena-02-1" zoneId="soggiorno" />
+	<move-device-zone deviceId="SensoreApertura-02" zoneId="soggiorno" />
+	<move-device-zone deviceId="Telecamera-02" zoneId="soggiorno" />
+
+	
+	<!-- CAMERA DA LETTO -->
+	<create-zone id="camera da letto"  leftX="55" topY="370" X-Length="259" Y-Length="210" />		
+	<add-zone-variable zoneId="camera da letto" variable="Illuminance" />
+	<modify-zone-variable zoneId="camera da letto" variable="Illuminance" value="0"/>
+	
+	<!-- luci -->
+	<create-device id="SensorePresenza-03" type="iCasa.PresenceSensor" />
+	<create-device id="Luce-03-1" type="iCasa.BinaryLight" />
+	<create-device id="Fotometro-03" type="iCasa.Photometer" />
+	<create-device id="Pulsante-L03" type="iCasa.PushButton" />
+	<set-device-property deviceId="Pulsante-L03" property="Tipologia" value="luci" />
+	<move-device-zone deviceId="SensorePresenza-03" zoneId="camera da letto" />
+	<move-device-zone deviceId="Luce-03-1" zoneId="camera da letto" />
+	<move-device-zone deviceId="Fotometro-03" zoneId="camera da letto" />
+	<move-device-zone deviceId="Pulsante-L03" zoneId="camera da letto" />
+
+	<!-- temperatura -->
+	<create-device id="Termometro-03" type="iCasa.Thermometer" />
+	<create-device id="Calorifero-03-1" type="iCasa.Heater" />
+	<create-device id="Condizionatore-03-1" type="iCasa.Cooler" />
+	<create-device id="Pulsante-T03" type="iCasa.PushButton" />
+	<set-device-property deviceId="Pulsante-T03" property="Tipologia" value="temperatura" />
+	<move-device-zone deviceId="Termometro-03" zoneId="camera da letto" />
+	<move-device-zone deviceId="Calorifero-03-1" zoneId="camera da letto" />
+	<move-device-zone deviceId="Condizionatore-03-1" zoneId="camera da letto" />
+	<move-device-zone deviceId="Pulsante-T03" zoneId="camera da letto" />
+
+	<!-- allarmi -->
+	<create-device id="Sirena-03-1" type="iCasa.Siren" />
+	<create-device id="SensoreApertura-03" type="iCasa.DoorWindowSensor" />
+	<create-device id="Telecamera-03" type="iCasa.Camera" />
+	<move-device-zone deviceId="Sirena-03-1" zoneId="camera da letto" />
+	<move-device-zone deviceId="SensoreApertura-03" zoneId="camera da letto" />
+	<move-device-zone deviceId="Telecamera-03" zoneId="camera da letto" />
+
+
+	<!-- BAGNO -->
+	<create-zone id="bagno"  leftX="55" topY="20" X-Length="260" Y-Length="350" />	
+	<add-zone-variable zoneId="bagno" variable="Illuminance" />
+	<modify-zone-variable zoneId="bagno" variable="Illuminance" value="0"/>
+	
+	<!-- luci -->
+	<create-device id="SensorePresenza-04" type="iCasa.PresenceSensor" />
+	<create-device id="Luce-04-1" type="iCasa.BinaryLight" />
+	<create-device id="Fotometro-04" type="iCasa.Photometer" />
+	<create-device id="Pulsante-L04" type="iCasa.PushButton" />
+	<set-device-property deviceId="Pulsante-L04" property="Tipologia" value="luci" />
+	<move-device-zone deviceId="SensorePresenza-04" zoneId="bagno" />
+	<move-device-zone deviceId="Luce-04-1" zoneId="bagno" />
+	<move-device-zone deviceId="Fotometro-04" zoneId="bagno" />
+	<move-device-zone deviceId="Pulsante-L04" zoneId="bagno" />
+
+	<!-- temperatura -->
+	<create-device id="Termometro-04" type="iCasa.Thermometer" />
+	<create-device id="Calorifero-04-1" type="iCasa.Heater" />
+	<create-device id="Condizionatore-04-1" type="iCasa.Cooler" />
+	<create-device id="Pulsante-T04" type="iCasa.PushButton" />
+	<set-device-property deviceId="Pulsante-T04" property="Tipologia" value="temperatura" />
+	<move-device-zone deviceId="Termometro-04" zoneId="bagno" />
+	<move-device-zone deviceId="Calorifero-04-1" zoneId="bagno" />
+	<move-device-zone deviceId="Condizionatore-04-1" zoneId="bagno" />
+	<move-device-zone deviceId="Pulsante-T04" zoneId="bagno" />
+
+	<!-- allarmi -->
+    <create-device id="SensoreAllagamento-04" type="iCasa.FloodSensor" />
+    <create-device id="Sirena-04-1" type="iCasa.Siren" />
+	<create-device id="SensoreApertura-04" type="iCasa.DoorWindowSensor" />
+	<create-device id="Telecamera-04" type="iCasa.Camera" />
+    <move-device-zone deviceId="SensoreAllagamento-04" zoneId="bagno" />
+    <move-device-zone deviceId="Sirena-04-1" zoneId="bagno" />
+	<move-device-zone deviceId="SensoreApertura-04" zoneId="bagno" />
+	<move-device-zone deviceId="Telecamera-04" zoneId="bagno" />
+	
+	
+	<!-- CORRIDOIO CENTRALE -->
+	<create-zone id="corridoio"  leftX="315" topY="20" X-Length="95" Y-Length="560" />	
+	<add-zone-variable zoneId="corridoio" variable="Illuminance" />
+	<modify-zone-variable zoneId="corridoio" variable="Illuminance" value="0"/>
+	
+	<!-- luci -->
+	<create-device id="SensorePresenza-05" type="iCasa.PresenceSensor" />
+	<create-device id="Luce-05-1" type="iCasa.BinaryLight" />
+	<create-device id="Luce-05-2" type="iCasa.BinaryLight" />
+	<create-device id="Fotometro-05" type="iCasa.Photometer" />
+	<create-device id="Pulsante-L05" type="iCasa.PushButton" />
+	<set-device-property deviceId="Pulsante-L05" property="Tipologia" value="luci" />
+	<move-device-zone deviceId="SensorePresenza-05" zoneId="corridoio" />
+	<move-device-zone deviceId="Luce-05-1" zoneId="corridoio" />
+	<move-device-zone deviceId="Luce-05-2" zoneId="corridoio" />
+	<move-device-zone deviceId="Fotometro-05" zoneId="corridoio" />
+	<move-device-zone deviceId="Pulsante-L05" zoneId="corridoio" />
+
+	<!-- temperatura -->
+	<create-device id="Termometro-05" type="iCasa.Thermometer" />
+	<create-device id="Calorifero-05" type="iCasa.Heater" />
+	<create-device id="Condizionatore-05" type="iCasa.Cooler" />
+	<create-device id="Pulsante-T05" type="iCasa.PushButton" />
+	<set-device-property deviceId="Pulsante-T05" property="Tipologia" value="temperatura" />
+	<move-device-zone deviceId="Termometro-05" zoneId="corridoio" />
+	<move-device-zone deviceId="Calorifero-05" zoneId="corridoio" />
+	<move-device-zone deviceId="Condizionatore-05" zoneId="corridoio" />
+	<move-device-zone deviceId="Pulsante-T05" zoneId="corridoio" />
+	
+	<!-- allarmi -->
+	<create-device id="Sirena-05-1" type="iCasa.Siren" />
+	<create-device id="SensoreApertura-05" type="iCasa.DoorWindowSensor" />
+	<create-device id="Telecamera-05" type="iCasa.Camera" />
+	<create-device id="Pulsante-A05" type="iCasa.PushButton" />
+	<set-device-property deviceId="Pulsante-A05" property="Tipologia" value="allarme" />
+	<move-device-zone deviceId="Sirena-05-1" zoneId="corridoio" />
+	<move-device-zone deviceId="SensoreApertura-05" zoneId="corridoio" />
+	<move-device-zone deviceId="Telecamera-05" zoneId="corridoio" />
+	<move-device-zone deviceId="Pulsante-A05" zoneId="corridoio" />
+
+	<create-person id="Mario Rossi" type="Grandfather" />
+
+</behavior>

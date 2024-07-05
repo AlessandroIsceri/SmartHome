@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ipojo xmlns="org.apache.felix.ipojo">
+  <component classname="controllers.InizializzaSistemaImpl" name="InizializzaSistema">
+    <requires aggregate="true" optional="true" specification="fr.liglab.adele.icasa.device.light.BinaryLight" field="luci">
+      <callback method="assegnaLuce" type="bind"/>
+      <callback method="ritiraLuce" type="unbind"/>
+    </requires>
+    <requires aggregate="true" optional="true" specification="fr.liglab.adele.icasa.device.presence.PresenceSensor" field="sensoriPresenza">
+      <callback method="assegnaSensorePresenza" type="bind"/>
+      <callback method="ritiraSensorePresenza" type="unbind"/>
+    </requires>
+    <requires aggregate="true" optional="true" specification="fr.liglab.adele.icasa.device.light.Photometer" field="fotometri">
+      <callback method="assegnaFotometro" type="bind"/>
+      <callback method="ritiraFotometro" type="unbind"/>
+    </requires>
+    <requires aggregate="true" optional="true" specification="fr.liglab.adele.icasa.device.gasSensor.CarbonDioxydeSensor" field="rilevatoriCO2">
+      <callback method="assegnaRilevatoreCO2" type="bind"/>
+      <callback method="ritiraRilevatoreCO2" type="unbind"/>
+    </requires>
+    <requires aggregate="true" optional="true" specification="fr.liglab.adele.icasa.device.sprinkler.Sprinkler" field="sprinklers">
+      <callback method="assegnaSprinkler" type="bind"/>
+      <callback method="ritiraSprinkler" type="unbind"/>
+    </requires>
+    <requires aggregate="true" optional="true" specification="fr.liglab.adele.icasa.device.security.Siren" field="sirene">
+      <callback method="assegnaSirena" type="bind"/>
+      <callback method="ritiraSirena" type="unbind"/>
+    </requires>
+    <callback method="start" transition="validate"/>
+    <callback method="stop" transition="invalidate"/>
+    <requires aggregate="true" optional="true" specification="fr.liglab.adele.icasa.device.security.FloodSensor" field="sensoriAllagamento">
+      <callback method="assegnaSensoreAllagamento" type="bind"/>
+      <callback method="ritiraSensoreAllagamento" type="unbind"/>
+    </requires>
+    <requires aggregate="true" optional="true" specification="fr.liglab.adele.icasa.device.temperature.Heater" field="caloriferi">
+      <callback method="assegnaCalorifero" type="bind"/>
+      <callback method="ritiraCalorifero" type="unbind"/>
+    </requires>
+    <requires aggregate="true" optional="true" specification="fr.liglab.adele.icasa.device.temperature.Cooler" field="condizionatori">
+      <callback method="assegnaCondizionatore" type="bind"/>
+      <callback method="ritiraCondizionatore" type="unbind"/>
+    </requires>
+    <requires aggregate="true" optional="true" specification="fr.liglab.adele.icasa.device.temperature.Thermometer" field="termometri">
+      <callback method="assegnaTermometro" type="bind"/>
+      <callback method="ritiraTermometro" type="unbind"/>
+    </requires>
+    <requires aggregate="true" optional="true" specification="fr.liglab.adele.icasa.device.security.Camera" field="telecamere">
+      <callback method="assegnaTelecamera" type="bind"/>
+      <callback method="ritiraTelecamera" type="unbind"/>
+    </requires>
+    <requires aggregate="true" optional="true" specification="fr.liglab.adele.icasa.device.doorWindow.DoorWindowSensor" field="sensoriPorteFinestre">
+      <callback method="assegnaSensorePortaFinestra" type="bind"/>
+      <callback method="ritiraSensorePortaFinestra" type="unbind"/>
+    </requires>
+    <requires aggregate="true" optional="true" specification="fr.liglab.adele.icasa.device.button.PushButton" field="pulsanti">
+      <callback method="assegnaPulsante" type="bind"/>
+      <callback method="ritiraPulsante" type="unbind"/>
+    </requires>
+  </component>
+  <instance component="InizializzaSistema" name="InizializzaSistema-1"/>
+</ipojo>
